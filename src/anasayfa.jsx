@@ -19,6 +19,7 @@ class AnaSayfa extends Component {
             gidisDonusTarihler: {
                 gidis: null,
                 donus: null,
+                isLoading: false,
 
             },
             nereden: '',
@@ -72,6 +73,8 @@ class AnaSayfa extends Component {
         this.setState({ nereye: event.target.value });
     }
     handleSwitchChange = () => {
+        document.querySelector('.dropdown').style.display = 'none';
+
         this.setState({
           yon: this.state.yon === 'gidisDonus' ? 'tekYon' : 'gidisDonus',
           uygunUcuslar: [], 
@@ -86,6 +89,7 @@ class AnaSayfa extends Component {
           alert("Uçuş bilgilerini doldurmalısınız.");
           return;
         }
+        this.setState({ isLoading: true });
         const selectedDate = yon === 'tekYon' ? tekYonTarih : gidisDonusTarihler.gidis;
         const matchingFlights = durations.durations.filter((flight) => {
           if (yon === 'tekYon') {
@@ -103,16 +107,20 @@ class AnaSayfa extends Component {
             );
           }
         });
-        if (matchingFlights.length > 0) {
-          document.querySelector('.dropdown').style.display = 'block';
-      
-          this.setState({
-            uygunUcuslar: matchingFlights,
-          });
-        } else {
-          console.log("Uygun uçuş bulunamadı.");
-        }
-      };
+        setTimeout(() => {
+            if (matchingFlights.length > 0) {
+                document.querySelector('.dropdown').style.display = 'block';
+    
+                this.setState({
+                    uygunUcuslar: matchingFlights,
+                });
+            } else {
+                console.log("Uygun uçuş bulunamadı.");
+            }
+    
+            this.setState({ isLoading: false });
+        }, 3000); 
+    };
       
 
     convertSureToMinutes = (sure) => {
@@ -227,6 +235,7 @@ class AnaSayfa extends Component {
 
 
                     <button className='search' onClick={this.handleAraClick}>Ara</button>
+                    {this.state.isLoading && <div className="loading"><div className="spinner"></div></div>}
 
                 </div>
                 <select onChange={this.handleSortChange} className='dropdown'>
@@ -241,7 +250,7 @@ class AnaSayfa extends Component {
 
                         <div key={index} className="flight-box">
                             <div className="flight-info">
-                                <div className='nnnn'>
+                                <div>
                                     <div className="flight-details">
                                         <div className="flight-details-left">
                                             <img className='flight-icon' src={logoDep} alt="Kalkış Icon" />

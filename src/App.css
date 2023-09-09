@@ -200,7 +200,7 @@ input[type="radio"] {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  margin: 10px 150px;
+  margin: 10px 350px;
   background-color: #F7A828;
   border-radius: 10px;
   background-image: linear-gradient(180deg, #ffffff, #d4d4d4, #777777);
@@ -261,9 +261,35 @@ input[type="radio"] {
 .flight-price p{
   height: 40px;
   width: 90px;
-  background-color: #1B69BC;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 22px;
   border-radius: 3px;
   text-align: center;
+  font-weight: bolder;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8); 
+  z-index: 9999;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.3); 
+  border-top: 4px solid #3498db; 
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; 
 }
