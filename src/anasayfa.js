@@ -132,7 +132,7 @@ class AnaSayfa extends Component {
       <div>
         <div className='header-bg'>
           <img src={logo} alt='logo'></img>
-          <p>TRAVEL TO FUTxdfddURE</p>
+          <p>TRAVEL TO FUTURE</p>
 
         </div>
 
