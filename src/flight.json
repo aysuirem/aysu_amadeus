@@ -1,0 +1,131 @@
+{
+    "cities" : [
+        {
+          "kod": "MUC",
+          "adi": "Münih Havalimanı",
+          "sehir": "Münih",
+          "ulke": "Almanya"
+        },
+        {
+          "kod": "PEK",
+          "adi": "Pekin Başkent Uluslararası Havalimanı",
+          "sehir": "Pekin",
+          "ulke": "Çin"
+        },
+        {
+          "kod": "SYD",
+          "adi": "Sydney Uluslararası Havalimanı",
+          "sehir": "Sydney",
+          "ulke": "Avustralya"
+        },
+        {
+          "kod": "LIS",
+          "adi": "Lizbon Portela Havalimanı",
+          "sehir": "Lizbon",
+          "ulke": "Portekiz"
+        },
+        {
+          "kod": "AMS",
+          "adi": "Amsterdam Schiphol Havalimanı",
+          "sehir": "Rio De Janerio",
+          "ulke": "Brezilya"
+        },
+        {
+          "kod": "RIO",
+          "adi": "Riode Janeiro Galeão Uluslararası Havalimanı",
+          "sehir": "Amsterdam",
+          "ulke": "Hollanda"
+        },
+        {
+          "kod": "ATH",
+          "adi": "Atina Uluslararası Havalimanı",
+          "sehir": "Atina",
+          "ulke": "Yunanistan"
+        },
+        {
+          "kod": "SIN",
+          "adi": "Singapur Changi Havalimanı",
+          "sehir": "Singapur",
+          "ulke": "Singapur"
+        },
+        {
+          "kod": "SYR",
+          "adi": "Şam Havalimanı",
+          "sehir": "Şam",
+          "ulke": "Suriye"
+        },
+        {
+          "kod": "DXB",
+          "adi": "Dubai Uluslararası Havalimanı",
+          "sehir": "Dubai",
+          "ulke": "Birleşik Arap Emirlikleri"
+        },
+        {
+          "kod": "JFK",
+          "adi": "John F. Kennedy Uluslararası Havalimanı",
+          "sehir": "New York",
+          "ulke": "ABD"
+        },
+        {
+          "kod": "LHR",
+          "adi": "Londra Heathrow Havalimanı",
+          "sehir": "Londra",
+          "ulke": "İngiltere"
+        },
+        {
+          "kod": "ICN",
+          "adi": "Incheon Uluslararası Havalimanı",
+          "sehir": "Seul",
+          "ulke": "Güney Kore"
+        },
+        {
+          "kod": "FRA",
+          "adi": "Frankfurt Havalimanı",
+          "sehir": "Frankfurt",
+          "ulke": "Almanya"
+        },
+        {
+          "kod": "SVO",
+          "adi": "Şeremetyevo Uluslararası Havalimanı",
+          "sehir": "Moskova",
+          "ulke": "Rusya"
+        },
+        {
+          "kod": "IST",
+          "adi": "İstanbul Havalimanı",
+          "sehir": "İstanbul",
+          "ulke": "Türkiye"
+        },
+        {
+          "kod": "CGK",
+          "adi": "Cakarta Soekarno-Hatta Havalimanı",
+          "sehir": "Cakarta",
+          "ulke": "Endonezya"
+        },
+        {
+          "kod": "LAX",
+          "adi": "Los Angeles Uluslararası Havalimanı",
+          "sehir": "Los Angeles",
+          "ulke": "ABD"
+        },
+        {
+          "kod": "HKG",
+          "adi": "Hong Kong Uluslararası Havalimanı",
+          "sehir": "Hong Kong",
+          "ulke": "Çin"
+        },
+        {
+          "kod": "YYZ",
+          "adi": "Toronto Pearson Uluslararası Havalimanı",
+          "sehir": "Toronto",
+          "ulke": "Kanada"
+        },
+        {
+          "kod": "MEX",
+          "adi": "Mexico City Uluslararası Havalimanı",
+          "sehir": "Mexico City",
+          "ulke": "Meksika"
+        }
+      ]
+}
+  

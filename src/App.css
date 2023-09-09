@@ -1,38 +1,261 @@
-.App {
+.header-bg {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background-position: top center;
+}
+
+.header-bg img {
+  height: 120px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+
+}
+
+.header-bg p {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #fafafa;
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.header-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, transparent, #F2F1ED, #F7A828);
+  background-size: 200% 100%;
+  animation: dalgalanma 3s infinite alternate-reverse;
+  z-index: 0;
+}
+
+@keyframes dalgalanma {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.row {
+  margin: 0 auto;
+  align-content: center;
+  height: 30vb;
+  width: fit-content;
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+}
+
+.button {
+  height: 56px;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: rgb(175, 175, 175);
+  border: #c8ca3c;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+  margin: 50px;
+
+}
+
+.search {
+  height: 72px;
+  width: 90px;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #F7A828;
+  border: #c8ca3c;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.datepicker_header {
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  height: 52px;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: rgb(175, 175, 175);
+  ;
+  border: #c8ca3c;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.combobox {
+  display: flex;
+}
+
+.combobox input {
+  padding: 8px;
+  height: 56px;
+}
+
+.combobox .item {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #a8b0b9;
+
+}
+
+.combobox .item-highlighted {
+  background-color: #f0f0f0;
+}
+
+.combobox:hover .dropdown {
+  display: block;
+}
+
+.combobox menu {
+  height: 10px;
+  width: 10px;
+}
+
+.logo-container {
+  margin-right: 10px;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+}
+
+.switch-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+
+  margin-top: 50px;
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 34px;
+}
+
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 10px;
+  transition: background-color 0.4s;
+}
+
+
+.switch .slider:before {
+  position: absolute;
+  content: "Tek Yön";
+  text-align: center;
+
+  height: 26px;
+  width: 135px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 5px;
+  transition: transform 0.4s;
+}
+
+.switch input[type="checkbox"]:checked+.slider {
+  background-color: #1B69BC;
+}
+
+.switch input[type="checkbox"]:checked+.slider:before {
+  transform: translateX(150px);
+  /* Sağa kaydır */
+  content: "Gidiş - Dönüş";
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.switch-label {
+  margin-left: 0px;
+  vertical-align: middle;
+  line-height: 34px;
+  display: inline-block;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flight-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px 150px;
+  background-color: #bdbcbc;
+  border-radius: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flight-info {
   display: flex;
   flex-direction: column;
+}
+
+.flight-icon {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 5px;
+  margin-left: 11px;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+.flight-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flight-details-left,
+.flight-details-right {
+  display: flex;
+  align-items: center;
+}
+
+/* App.css veya ilgili stil dosyanızda */
+.kalkis-zamani p {
+  height: 40px;
+  width: 70px;
+  background-color: #636363;
   color: white;
+  font-size: 22px;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown {
+  display: none;
+  height: 56px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.8;
+  border: #c8ca3c;
+  border-radius: 2px;
+  cursor: pointer;
+
 }
