@@ -4,13 +4,17 @@ import 'react-datepicker/dist/react-datepicker.css';
 import cities from './flight.json';
 import { useCombobox } from 'downshift';
 import logo from './assets/amadeuslogo.png';
-import durations from './durations.json';
+//import durations from './durations.json';
 import logoAr from './assets/arrivals.png';
 import logoDep from './assets/departure.png'
 
 
 
+
+
+
 class AnaSayfa extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -89,55 +93,66 @@ class AnaSayfa extends Component {
           alert("Uçuş bilgilerini doldurmalısınız.");
           return;
         }
+      
         this.setState({ isLoading: true });
-        const selectedDate = yon === 'tekYon' ? tekYonTarih : gidisDonusTarihler.gidis;
-        const matchingFlights = durations.durations.filter((flight) => {
-          if (yon === 'tekYon') {
-            return (
-              flight.kalkisHavalimani === nereden &&
-              flight.varisHavalimani === nereye &&
-              flight.kalkisZamani.startsWith(selectedDate)
-            );
-          } else {
-            return (
-              flight.kalkisHavalimani === nereden &&
-              flight.varisHavalimani === nereye &&
-              (flight.kalkisZamani.startsWith(gidisDonusTarihler.gidis)
-                && flight.varisZamani.startsWith(gidisDonusTarihler.donus))
-            );
-          }
-        });
-        setTimeout(() => {
+      
+        const apiUrl = 'http://localhost:3000/durations';
+        fetch(apiUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            const selectedDate = yon === 'tekYon' ? tekYonTarih : gidisDonusTarihler.gidis;
+            const matchingFlights = data.filter((flight) => {
+              if (yon === 'tekYon') {
+                return (
+                  flight.kalkisHavalimani === nereden &&
+                  flight.varisHavalimani === nereye &&
+                  flight.kalkisZamani.startsWith(selectedDate)
+                );
+              } else {
+                return (
+                  flight.kalkisHavalimani === nereden &&
+                  flight.varisHavalimani === nereye &&
+                  (flight.kalkisZamani.startsWith(gidisDonusTarihler.gidis) &&
+                    flight.varisZamani.startsWith(gidisDonusTarihler.donus))
+                );
+              }
+            });
+      
             if (matchingFlights.length > 0) {
-                document.querySelector('.dropdown').style.display = 'block';
-    
-                this.setState({
-                    uygunUcuslar: matchingFlights,
-                });
+              document.querySelector('.dropdown').style.display = 'block';
+      
+              this.setState({
+                uygunUcuslar: matchingFlights,
+                isLoading: false,
+              });
             } else {
-                console.log("Uygun uçuş bulunamadı.");
+              console.log("Uygun uçuş bulunamadı.");
+              this.setState({ isLoading: false }); 
             }
-    
-            this.setState({ isLoading: false });
-        }, 3000); 
-    };
+          })
+          .catch((error) => {
+            console.error('API isteği sırasında hata oluştu: ', error);
+            this.setState({ isLoading: false }); 
+          });
+      };
+      
       
 
-    convertSureToMinutes = (sure) => {
+      convertSureToMinutes(sure) {
         const parts = sure.split(' ');
-        let minutes = 0;
-
-        for (let i = 0; i < parts.length; i++) {
-            const part = parts[i];
-            if (part === 's') {
-                minutes += parseInt(parts[i - 1]);
-            } else if (part === 'dk') {
-                minutes += parseInt(parts[i - 1]);
+        let totalMinutes = 0;
+    
+        for (let i = 0; i < parts.length; i += 2) {
+            if (parts[i + 1] === 's') {
+                totalMinutes += parseInt(parts[i]) * 60;
+            } else if (parts[i + 1] === 'dk') {
+                totalMinutes += parseInt(parts[i]);
             }
         }
-
-        return minutes;
-    };
+    
+        return totalMinutes;
+    }
+    
 
     handleSortChange = (event) => {
         const sortBy = event.target.value;
