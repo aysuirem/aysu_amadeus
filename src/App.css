@@ -184,7 +184,6 @@ input[type="radio"] {
 
 .switch input[type="checkbox"]:checked+.slider:before {
   transform: translateX(150px);
-  /* Sağa kaydır */
   content: "Gidiş - Dönüş";
   text-align: center;
 }
@@ -202,8 +201,10 @@ input[type="radio"] {
   justify-content: space-between;
   padding: 10px;
   margin: 10px 150px;
-  background-color: #bdbcbc;
-  border-radius: 30px;
+  background-color: #F7A828;
+  border-radius: 10px;
+  background-image: linear-gradient(180deg, #ffffff, #d4d4d4, #777777);
+
 }
 
 .flight-info {
@@ -235,14 +236,13 @@ input[type="radio"] {
   align-items: center;
 }
 
-/* App.css veya ilgili stil dosyanızda */
 .kalkis-zamani p {
   height: 40px;
-  width: 70px;
-  background-color: #636363;
+  width: 90px;
+  background-color: #1B69BC;
   color: white;
   font-size: 22px;
-  border-radius: 5px;
+  border-radius: 3px;
   text-align: center;
 }
 
@@ -253,9 +253,17 @@ input[type="radio"] {
   padding: 10px 20px;
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
-  opacity: 0.8;
-  border: #c8ca3c;
-  border-radius: 2px;
+  border-radius: 10px;
   cursor: pointer;
 
+}
+
+.flight-price p{
+  height: 40px;
+  width: 90px;
+  background-color: #1B69BC;
+  color: white;
+  font-size: 22px;
+  border-radius: 3px;
+  text-align: center;
 }
