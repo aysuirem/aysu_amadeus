@@ -4,12 +4,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import cities from './flight.json';
 import { useCombobox } from 'downshift';
 import logo from './assets/amadeuslogo.png';
-//import durations from './durations.json';
 import logoAr from './assets/arrivals.png';
 import logoDep from './assets/departure.png'
-
-
-
 
 
 
@@ -96,7 +92,7 @@ class AnaSayfa extends Component {
       
         this.setState({ isLoading: true });
       
-        const apiUrl = 'http://localhost:3000/durations';
+        const apiUrl = 'http://localhost:3000/durations'; //README dosyasına bakabilirsiniz.
         fetch(apiUrl)
           .then((response) => response.json())
           .then((data) => {
@@ -127,12 +123,16 @@ class AnaSayfa extends Component {
               });
             } else {
               console.log("Uygun uçuş bulunamadı.");
+              if (nereden || nereye || (tekYonTarih && (gidisDonusTarihler.gidis && gidisDonusTarihler.donus))) {
+                alert("Uygun uçuş bulunamadı.");
+                
+              }
               this.setState({ isLoading: false }); 
             }
           })
           .catch((error) => {
             console.error('API isteği sırasında hata oluştu: ', error);
-            this.setState({ isLoading: false }); 
+            this.setState({ isLoading: false });   
           });
       };
       
@@ -314,10 +314,11 @@ function OtomatikTamamlama({ onSelectionChange, options, placeholder }) {
         },
         itemToString: (item) => (item ? item : ''),
         filterItems: (items, value) =>
-            items.filter(
-                (item) => item.toLowerCase().includes(value.toLowerCase())
-            ),
-        //BURADA SIKINTI VAR
+        items.filter(
+            (item) => item.toLowerCase().includes(value.toLowerCase())
+        ),
+    
+
     });
 
     return (
@@ -328,7 +329,7 @@ function OtomatikTamamlama({ onSelectionChange, options, placeholder }) {
                     placeholder: placeholder,
                 })}
             />
-            <div {...getMenuProps()} >
+            <div {...getMenuProps()} className="item-container" >
                 {isOpen
                     ? options
                         .filter((item) => !inputValue || item.includes(inputValue))
@@ -340,10 +341,13 @@ function OtomatikTamamlama({ onSelectionChange, options, placeholder }) {
                                     item,
                                 })}
                                 className={`item ${highlightedIndex === index ? 'item-highlighted' : ''
+                              
                                     }`}
                             >
                                 {item}
+                              
                             </div>
+                            
                         ))
                     : null}
             </div>

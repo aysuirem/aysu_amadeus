@@ -107,7 +107,7 @@ input[type="radio"] {
 .combobox .item {
   padding: 10px;
   cursor: pointer;
-  background-color: #a8b0b9;
+  background-color: #dbecff;
 
 }
 
@@ -293,3 +293,9 @@ input[type="radio"] {
   height: 40px;
   animation: spin 1s linear infinite; 
 }
+.item-container {
+  max-height: 200px; 
+  overflow-y: auto;
+  border-radius: 10px;
+}
+

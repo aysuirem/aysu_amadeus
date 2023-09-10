@@ -101,14 +101,9 @@
     },
     
 
-
-
-
-
-
     {
       "kalkisHavalimani": "İstanbul Havalimanı",
-      "varisHavalimani": "Mexico City Uluslararası Havalimanı",
+      "varisHavalimani": "Pekin Başkent Uluslararası Havalimanı",
       "ucusNumarasi": "AA123",
       "kalkisZamani": "2023-09-12T15:30:00",
       "varisZamani": "2023-09-13T01:45:00",
@@ -278,7 +273,7 @@
         "ucusSuresi": "11 s 15 dakika"
       },
       {
-        "kalkisHavalimani": "Seul Incheon Uluslararası Havalimanı",
+        "kalkisHavalimani": "Incheon Uluslararası Havalimanı",
         "varisHavalimani": "New York JFK Havalimanı",
         "ucusNumarasi": "KE201",
         "kalkisZamani": "2023-10-12T12:30:00",
@@ -341,7 +336,7 @@
         "ucusSuresi": "14 s 30 dakika"
       },
       {
-        "kalkisHavalimani": "Rio de Janeiro Galeão Uluslararası Havalimanı",
+        "kalkisHavalimani": "Riode Janeiro Galeão Uluslararası Havalimanı",
         "varisHavalimani": "Cape Town Uluslararası Havalimanı",
         "ucusNumarasi": "JJ101",
         "kalkisZamani": "2023-11-01T08:30:00",
@@ -368,6 +363,33 @@
         "ucusSuresi": "9 s 15 dakika"
       },
       {
+        "kalkisHavalimani": "Lizbon Portela Havalimanı",
+        "varisHavalimani": "Riode Janeiro Galeão Uluslararası Havalimanı",
+        "ucusNumarasi": "TP301",
+        "kalkisZamani": "2023-11-07T13:45:00",
+        "varisZamani": "2023-11-07T22:00:00",
+        "fiyat": 950,
+        "ucusSuresi": "9 s 15 dakika"
+      },
+      {
+        "kalkisHavalimani": "Lizbon Portela Havalimanı",
+        "varisHavalimani": "Riode Janeiro Galeão Uluslararası Havalimanı",
+        "ucusNumarasi": "TP301",
+        "kalkisZamani": "2023-11-07T12:45:00",
+        "varisZamani": "2023-11-07T21:00:00",
+        "fiyat": 950,
+        "ucusSuresi": "9 s 15 dakika"
+      },
+         {
+        "kalkisHavalimani": "Lizbon Portela Havalimanı",
+        "varisHavalimani": "Riode Janeiro Galeão Uluslararası Havalimanı",
+        "ucusNumarasi": "TP301",
+        "kalkisZamani": "2023-11-07T11:45:00",
+        "varisZamani": "2023-11-07T20:00:00",
+        "fiyat": 950,
+        "ucusSuresi": "9 s 15 dakika"
+      },
+      {
         "kalkisHavalimani": "Sidney Kingsford Smith Havalimanı",
         "varisHavalimani": "Johannesburg Uluslararası Havalimanı",
         "ucusNumarasi": "QF401",
@@ -387,7 +409,7 @@
       },
       {
         "kalkisHavalimani": "Atina Uluslararası Havalimanı",
-        "varisHavalimani": "Moskova Şeremetyevo Uluslararası Havalimanı",
+        "varisHavalimani": "Şeremetyevo Uluslararası Havalimanı",
         "ucusNumarasi": "OA601",
         "kalkisZamani": "2023-11-16T12:15:00",
         "varisZamani": "2023-11-16T17:30:00",
@@ -396,7 +418,7 @@
       },
       {
         "kalkisHavalimani": "Toronto Pearson Uluslararası Havalimanı",
-        "varisHavalimani": "Seul Incheon Uluslararası Havalimanı",
+        "varisHavalimani": "Incheon Uluslararası Havalimanı",
         "ucusNumarasi": "AC701",
         "kalkisZamani": "2023-11-19T09:00:00",
         "varisZamani": "2023-11-20T01:30:00",
@@ -485,7 +507,7 @@
         "ucusSuresi": "13 s 30 dakika"
       },
       {
-        "kalkisHavalimani": "Seul Incheon Uluslararası Havalimanı",
+        "kalkisHavalimani": "Incheon Uluslararası Havalimanı",
         "varisHavalimani": "Frankfurt Havalimanı",
         "ucusNumarasi": "KE801",
         "kalkisZamani": "2023-12-19T08:30:00",
@@ -512,7 +534,7 @@
         "ucusSuresi": "14 s 15 dakika"
       },
       {
-        "kalkisHavalimani": "Moskova Şeremetyevo Uluslararası Havalimanı",
+        "kalkisHavalimani": "Şeremetyevo Uluslararası Havalimanı",
         "varisHavalimani": "New York JFK Havalimanı",
         "ucusNumarasi": "SU901",
         "kalkisZamani": "2023-12-28T19:30:00",
@@ -548,14 +570,79 @@
         "ucusSuresi": "4 s 45 dakika"
       },
       {
-        "kalkisHavalimani": "New York JFK Havalimanı",
+        "kalkisHavalimani": "Singapur Changi Havalimanı",
         "varisHavalimani": "San Francisco Uluslararası Havalimanı",
         "ucusNumarasi": "AA505",
         "kalkisZamani": "2023-10-10T08:30:00",
         "varisZamani": "2023-10-10T12:00:00",
         "fiyat": 420,
         "ucusSuresi": "5 s 30 dakika"
+      },
+      {
+        "kalkisHavalimani": "Singapur Changi Havalimanı",
+        "varisHavalimani": "San Francisco Uluslararası Havalimanı",
+        "ucusNumarasi": "AA505",
+        "kalkisZamani": "2023-10-09T08:30:00",
+        "varisZamani": "2023-10-09T12:00:00",
+        "fiyat": 420,
+        "ucusSuresi": "5 s 30 dakika"
+      },
+      {
+        "kalkisHavalimani": "New York JFK Havalimanı",
+        "varisHavalimani": "Singapur Changi Havalimanı",
+        "ucusNumarasi": "AA505",
+        "kalkisZamani": "2023-10-10T05:30:00",
+        "varisZamani": "2023-10-10T09:00:00",
+        "fiyat": 420,
+        "ucusSuresi": "5 s 30 dakika"
+      },
+      {
+        "kalkisHavalimani": "New York JFK Havalimanı",
+        "varisHavalimani": "Singapur Changi Havalimanı",
+        "ucusNumarasi": "AA505",
+        "kalkisZamani": "2023-10-10T06:30:00",
+        "varisZamani": "2023-10-10T10:00:00",
+        "fiyat": 420,
+        "ucusSuresi": "5 s 30 dakika"
+      },
+      {
+        "kalkisHavalimani": "New York JFK Havalimanı",
+        "varisHavalimani": "Singapur Changi Havalimanı",
+        "ucusNumarasi": "AA505",
+        "kalkisZamani": "2023-10-10T07:30:00",
+        "varisZamani": "2023-10-10T17:00:00",
+        "fiyat": 420,
+        "ucusSuresi": "9 s 30 dakika"
+      },
+      {
+        "kalkisHavalimani": "Şam Havalimanı",
+        "varisHavalimani": "Dubai Uluslararası Havalimanı",
+        "ucusNumarasi": "AA505",
+        "kalkisZamani": "2023-10-10T08:30:00",
+        "varisZamani": "2023-10-10T19:00:00",
+        "fiyat": 420,
+        "ucusSuresi": "10 s 30 dakika"
+      },
+      {
+        "kalkisHavalimani": "Şam Havalimanı",
+        "varisHavalimani": "Dubai Uluslararası Havalimanı",
+        "ucusNumarasi": "AA505",
+        "kalkisZamani": "2023-10-10T07:30:00",
+        "varisZamani": "2023-10-10T16:30:00",
+        "fiyat": 420,
+        "ucusSuresi": "9 s"
+      },
+      {
+        "kalkisHavalimani": "Lizbon Portela Havalimanı",
+        "varisHavalimani": "John F. Kennedy Uluslararası Havalimanı",
+        "ucusNumarasi": "TP301",
+        "kalkisZamani": "2023-11-07T11:45:00",
+        "varisZamani": "2023-11-07T20:00:00",
+        "fiyat": 950,
+        "ucusSuresi": "9 s 15 dakika"
       }
+  
+      
       
       
       
